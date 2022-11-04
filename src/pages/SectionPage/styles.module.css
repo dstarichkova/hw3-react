@@ -25,7 +25,18 @@
     border: none;
     color: #000000;
     background-color: #FFFFFF;
+    transition: 0.4s;
 }
+
+.sections__button_status_active {
+    font-weight: 700;
+}
+
+.sections__button:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
 
 /*.sections__button:focus {*/
 /*    color: red;*/

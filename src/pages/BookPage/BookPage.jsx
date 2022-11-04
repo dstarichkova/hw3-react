@@ -5,8 +5,9 @@ import classnames from "classnames";
 import styles from "./styles.module.css";
 
 export const BookPage = (book, className) => {
+
     return <div className={classnames(styles.section__content, className)}>
         {/*<BookInfo>{book}</BookInfo>*/}
-        <Reviews>reviews={book.reviews}</Reviews>
+        <Reviews reviews={book.book.reviews} />
     </div>
 }
