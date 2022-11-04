@@ -1,0 +1,8 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: green;
+    width: 100%;
+    /*gap: 20px;*/
+}

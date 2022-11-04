@@ -1,0 +1,50 @@
+.sections__buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 24px;
+
+    /*position: absolute;*/
+    width: 285px;
+    height: 659px;
+    /*left: 40px;*/
+    /*top: 118px;*/
+
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.sections__button {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/*.sections__button:focus {*/
+/*    color: red;*/
+/*}*/
+
+.section__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: red
+}
+
+/*.sections__button:focus {*/
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    font-size: 16px;*/
+/*    line-height: 22px;*/
+
+/*    color: #000000;*/
+/*}*/
