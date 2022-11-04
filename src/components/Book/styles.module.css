@@ -4,21 +4,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px 20px;
-    /*gap: 215px;*/
-
     width: 100%;
-    /*width: auto;*/
-    /*height: 216px;*/
-
     background: #FFFFFF;
     border-radius: 8px;
-
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    /*font-weight: 700;*/
-    /*font-size: 20px;*/
-    /*line-height: 27px;*/
-
     color: #000000;
 }
 
@@ -27,7 +17,6 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
-
     color: #000000;
 }
 
@@ -36,7 +25,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -45,10 +33,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
-    /* identical to box height */
-
     color: #000000;
-
 }
 
 .add__button {
@@ -56,7 +41,7 @@
     gap: 8px;
     align-content: center;
     border: none;
-    width: 38px;
+    min-width: 38px;
     height: 38px;
     background: #000000;
     border-radius: 8px;

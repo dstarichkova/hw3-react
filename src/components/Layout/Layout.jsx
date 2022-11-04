@@ -7,6 +7,5 @@ export const Layout = (props, className) => {
         <div className={classnames(styles.main, className)}>
             { props.children }
         </div>
-        <footer>footer</footer>
     </div>
 }

@@ -8,6 +8,6 @@ const test = 'Hello'
 export function App() {
     return <Layout>
         <SectionPage sections={sections}/>
-        {/* <BookPage book={sections[0].books[0]}/> */}
+        {/* <BookPage book={sections[0].books[0]}/>*/}
     </Layout>
 }

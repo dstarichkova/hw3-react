@@ -1,0 +1,15 @@
+.book__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.book__on_page {
+    align-items: flex-end;
+    width: 50%;
+}
+
+.annotation {
+    width: 50%;
+}

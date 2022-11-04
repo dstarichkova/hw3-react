@@ -25,7 +25,7 @@
     border: none;
     color: #000000;
     background-color: #FFFFFF;
-    transition: 0.4s;
+    transition: 0.05s;
 }
 
 .sections__button_status_active {
@@ -34,28 +34,12 @@
 
 .sections__button:hover {
     cursor: pointer;
-    opacity: 60%;
+    color: #808080
 }
-
-
-/*.sections__button:focus {*/
-/*    color: red;*/
-/*}*/
 
 .section__content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
-    background-color: red
 }
-
-/*.sections__button:focus {*/
-/*    font-family: 'Open Sans', sans-serif;*/
-/*    font-style: normal;*/
-/*    font-weight: 700;*/
-/*    font-size: 16px;*/
-/*    line-height: 22px;*/
-
-/*    color: #000000;*/
-/*}*/

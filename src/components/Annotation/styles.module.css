@@ -1,4 +1,6 @@
-.review{
+.annotation {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -6,18 +8,19 @@
     gap: 16px;
     background: #FFFFFF;
     border-radius: 8px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
     color: #000000;
+    width: 50%;
 }
 
-.review__user{
+.annotation__title {
     font-weight: 700;
     font-size: 16px;
-    line-height: 22px;
 }
 
-.review__text{
+.annotation__text {
     font-weight: 400;
     font-size: 14px;
+
+
 }
+

@@ -6,11 +6,6 @@ import styles from './styles.module.css';
 export const SectionPage = (props, className) => {
   const [activeSection, setActiveSection] = useState(props.sections[0]);
 
-  console.log(activeSection);
-  // const [isActive, setIsActive] = useState(false);
-  // const handleClick = () => {
-  //     setIsActive(current => !current);
-  // }
   return (
     <div className={classnames(styles.section__content, className)}>
       <div className={classnames(styles.sections__buttons, className)}>

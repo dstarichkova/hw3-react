@@ -6,7 +6,7 @@ import classnames from "classnames";
 export const Reviews = ({reviews}, className) => {
   
     const [items, setItems] = useState([]);
-    return <div className={classnames(styles.reviews__content, className)}>
+    return <div className={classnames(styles.reviews, className)}>
         {
             reviews.map((review) => <Review key={review.id} review={review}/>)
         }
