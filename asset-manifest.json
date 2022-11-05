@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/hw3-react/static/css/main.b5032abb.css",
-    "main.js": "/hw3-react/static/js/main.6acb05ee.js",
+    "main.css": "/hw3-react/static/css/main.01dfcb04.css",
+    "main.js": "/hw3-react/static/js/main.5592581c.js",
+    "static/media/cart_icon.svg": "/hw3-react/static/media/cart_icon.56f7c5dd5928b2154081.svg",
     "index.html": "/hw3-react/index.html",
-    "main.b5032abb.css.map": "/hw3-react/static/css/main.b5032abb.css.map",
-    "main.6acb05ee.js.map": "/hw3-react/static/js/main.6acb05ee.js.map"
+    "main.01dfcb04.css.map": "/hw3-react/static/css/main.01dfcb04.css.map",
+    "main.5592581c.js.map": "/hw3-react/static/js/main.5592581c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5032abb.css",
-    "static/js/main.6acb05ee.js"
+    "static/css/main.01dfcb04.css",
+    "static/js/main.5592581c.js"
   ]
 }
