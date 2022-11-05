@@ -4,7 +4,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    gap: 1084px;
     background: #000000;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -12,6 +11,12 @@
     font-size: 20px;
     line-height: 27px;
     color: #FFFFFF;
+}
+
+.cart__icon {
+    width: 24px;
+    height: 24px;
+    background: url('../../../public/cart_icon.svg');
 }
 
 .main {

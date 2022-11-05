@@ -58,6 +58,12 @@
 
 .add__button:disabled {
     opacity: 50%;
+    cursor: not-allowed;
+}
+
+.add__button:hover:enabled {
+    cursor: pointer;
+    opacity: 75%;
 }
 
 .add__buttons_count {
