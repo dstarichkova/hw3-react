@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hw3-react/static/css/main.b5032abb.css",
+    "main.js": "/hw3-react/static/js/main.6acb05ee.js",
+    "index.html": "/hw3-react/index.html",
+    "main.b5032abb.css.map": "/hw3-react/static/css/main.b5032abb.css.map",
+    "main.6acb05ee.js.map": "/hw3-react/static/js/main.6acb05ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5032abb.css",
+    "static/js/main.6acb05ee.js"
+  ]
+}
