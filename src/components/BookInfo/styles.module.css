@@ -6,10 +6,9 @@
 }
 
 .book__on_page {
-    align-items: flex-end;
-    width: 50%;
+    flex-grow: 1
 }
 
 .annotation {
-    width: 50%;
+    flex-grow: 1
 }

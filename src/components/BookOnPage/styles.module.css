@@ -1,9 +1,9 @@
 .book {
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 16px 20px 20px;
     background: #FFFFFF;
     border-radius: 8px;
@@ -43,6 +43,16 @@
     font-size: 24px;
     line-height: 33px;
     color: #000000;
+}
+
+.book__buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .add__button {

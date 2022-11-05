@@ -11,14 +11,14 @@ export const SectionPage = (props, className) => {
       <div className={classnames(styles.sections__buttons, className)}>
         {props.sections.map((section) => (
           <button
-            className={classnames(
-              styles.sections__button,
-              section.id === activeSection.id
-                && styles.sections__button_status_active,
-              className
-            )}
             key={section.id}
             onClick={() => setActiveSection(section)}
+            className={classnames(
+                styles.sections__button,
+                section.id === activeSection.id
+                && styles.sections__button_status_active,
+                className
+            )}
           >
             {section.name}
           </button>

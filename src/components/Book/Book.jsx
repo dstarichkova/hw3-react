@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 export const Book = ({book, className}) => {
     const [count, setCount] = useState(0);
     return <div className={classnames(styles.book, className)}>
-        <div>
+        <div className={classnames(styles.book__content, className)}>
             <h3 className={classnames(styles.book__name, className)}>{book.name}</h3>
             <div className={classnames(styles.book__info, className)}>{book.author}</div>
             <div className={classnames(styles.book__info)}>{book.genre}</div>
