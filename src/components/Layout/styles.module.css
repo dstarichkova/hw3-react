@@ -5,6 +5,10 @@
     align-items: center;
     padding: 20px 40px;
     background: #000000;
+}
+
+.logo {
+    text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
