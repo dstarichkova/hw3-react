@@ -8,9 +8,10 @@ import {selectBookById} from "../../store/books/selectors";
 import {cartSlice} from "../../store/cart";
 import {selectBookCount} from "../../store/cart/selectors";
 
-export const  Book = ({bookId, className}) => {
+export const  Book = ({bookId, className, sectionId}) => {
     const dispatch = useDispatch();
     const book = useSelector(state => selectBookById(state, bookId))
+    console.log(book)
     const count = useSelector(state => selectBookCount(state, bookId))
 
     if (!book) {
