@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
 import {Books} from "./components/Books/Books";
 import {Section} from "./components/Section/Section";
+import {CartPage} from "./pages/CartPage/CartPage";
 
 export function App() {
     return (
@@ -17,6 +18,7 @@ export function App() {
                         <Route path="/" element={<SectionPage/>}>
                             <Route path=":sectionId" element={<Section/>}/>
                         </Route>
+                        <Route path="/cart" element={<CartPage/>}/>
                         <Route path="*" element={<NotFoundPage/>}/>
                     </Routes>
                     {/*<BookPage book={sections[0].books[0]}/>*/}

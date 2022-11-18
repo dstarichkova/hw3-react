@@ -3,12 +3,11 @@ import classnames from 'classnames';
 
 import styles from './styles.module.css';
 import {useDispatch, useSelector} from "react-redux";
-import {loadSectionsIfNotExist} from "../../store/section/loadSectionsIfNotExist";
 import {selectBookById} from "../../store/books/selectors";
 import {cartSlice} from "../../store/cart";
 import {selectBookCount} from "../../store/cart/selectors";
 
-export const  Book = ({bookId, className, sectionId}) => {
+export const  Book = ({bookId, className}) => {
     const dispatch = useDispatch();
     const book = useSelector(state => selectBookById(state, bookId))
     console.log(book)
@@ -17,6 +16,8 @@ export const  Book = ({bookId, className, sectionId}) => {
     if (!book) {
         return null;
     }
+
+    console.log(cartSlice.actions)
 
     return <div className={classnames(styles.book, className)}>
         <div className={classnames(styles.book__content, className)}>
