@@ -1,13 +1,11 @@
 import { useSelector } from 'react-redux';
-import { selectBooks } from '../../store/books/selectors';
-import { selectCartModule } from '../../store/cart/selectors';
+import { selectBookById } from '../../store/books/selectors';
 
-export const Order = () => {
-    const cart = useSelector(state => selectCartModule(state));
-    const books = useSelector(state => selectBooks(state));
+export const Order = ({item}) => {
+    const book = useSelector(state => selectBookById(state, item.bookId))
 
-    console.log(cart, books)
-
-    return <div>order</div>
+    return <li key={item.bookId}>
+        <div>{book.name}</div>
+        <div>{book.price} х {item.count}</div>
+    </li>
 }
-

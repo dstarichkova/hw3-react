@@ -17,7 +17,7 @@ export const  Book = ({bookId, className}) => {
         return null;
     }
 
-    console.log(cartSlice.actions)
+    console.log(cartSlice.actions.removeBook)
 
     return <div className={classnames(styles.book, className)}>
         <div className={classnames(styles.book__content, className)}>

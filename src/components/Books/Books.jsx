@@ -5,21 +5,23 @@ import classnames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {loadBooksIfNotExist} from "../../store/books/loadBooksIfNotExist";
-import {selectBooks, selectIsBooksLoading} from "../../store/books/selectors";
+import {selectIsBooksLoading} from "../../store/books/selectors";
 import {selectSectionBookIds} from "../../store/section/selectors";
 import {useParams} from "react-router-dom";
+import { selectCartBookIds } from "../../store/cart/selectors";
 
-export const Books = (className,) => {
+export const Books = (className) => {
     const {sectionId} = useParams()
+    const {cart} = useParams()
     const dispatch = useDispatch();
-    console.log(sectionId);
     useEffect(() => {
         dispatch(loadBooksIfNotExist(sectionId));
     }, [sectionId]);
-    console.log(sectionId);
 
-    // const books = useSelector(state => selectBooks(state))
-    const bookIds = useSelector(state => selectSectionBookIds(state, sectionId))
+
+    let bookIds = useSelector(state => selectSectionBookIds(state, sectionId))
+    let bookCartIds = useSelector(state => selectCartBookIds(state))
+
     const isLoading = useSelector(state => selectIsBooksLoading(state))
 
     if (isLoading) {
@@ -28,6 +30,15 @@ export const Books = (className,) => {
 
     if (!bookIds) {
         return null;
+    }
+
+    if (cart) {
+        return <div className={classnames(styles.books, className)}>
+            {
+                bookCartIds.map((id) => (
+                    <Book key={id} bookId={id}/>
+                ))}
+        </div>
     }
 
     return <div className={classnames(styles.books, className)}>

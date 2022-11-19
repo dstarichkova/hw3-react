@@ -17,6 +17,6 @@ export const Section = ({className}) => {
     console.log(sectionId)
 
     return <div className={classnames(styles.section, className)}>
-        <Books sectionId={sectionId}/>
+        <Books sectionId={sectionId} cart={false}/>
     </div>
 }
