@@ -14,6 +14,6 @@ export const BookInfo = (className) => {
 
     return <div className={classnames(styles.book__info, className)}>
         <BookOnPage book={book} className={classnames(styles.book__on_page, className)}/>
-        <Annotation annotation={book.annotation}/>
+        <Annotation annotation={book?.annotation}/>
     </div>
 }

@@ -8,19 +8,21 @@ import {loadBooksIfNotExist} from "../../store/books/loadBooksIfNotExist";
 import {selectSectionBookIds} from "../../store/section/selectors";
 import {selectBookReviewIds, selectIsBooksLoading} from "../../store/books/selectors";
 import {selectIsReviewsLoading} from "../../store/reviews/selectors";
+import {loadReviewsIfNotExist} from "../../store/reviews/loadReviewsIfNotExist";
 
 export const Reviews = (className) => {
 
-    const { bookId } = useParams()
+    const { bookId } = useParams();
+    console.log(bookId)
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(loadBooksIfNotExist(bookId));
+        dispatch(loadReviewsIfNotExist(bookId));
     }, [bookId]);
 
     const reviewIds = useSelector(state => selectBookReviewIds(state, bookId))
     const isLoading = useSelector(state => selectIsReviewsLoading(state))
 
-    console.log(reviewIds)
+    // console.log(reviewIds)
 
     if (isLoading) {
         return <span>Loading ...</span>;
