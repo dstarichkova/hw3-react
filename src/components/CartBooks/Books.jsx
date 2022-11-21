@@ -9,29 +9,31 @@ import {selectIsBooksLoading} from "../../store/books/selectors";
 import {selectSectionBookIds} from "../../store/section/selectors";
 import {useParams} from "react-router-dom";
 import { selectCartBookIds } from "../../store/cart/selectors";
+import {loadCartIfNotExist} from "../../store/cart/loadCartIfNotExis";
 
-export const Books = (className) => {
-    const {sectionId} = useParams()
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(loadBooksIfNotExist(sectionId));
-    }, [sectionId]);
+export const CartBooks = (className) => {
+    // const {cart} = useParams()
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     dispatch(loadCartIfNotExist);
+    // }, [dispatch]);
 
-    const bookIds = useSelector(state => selectSectionBookIds(state, sectionId))
+
+    let bookCartIds = useSelector(state => selectCartBookIds(state))
     const isLoading = useSelector(state => selectIsBooksLoading(state))
 
     if (isLoading) {
         return <span>Loading ...</span>;
     }
 
-    if (!bookIds) {
+    if (!bookCartIds) {
         return null;
     }
 
     return <div className={classnames(styles.books, className)}>
         {
-            bookIds.map((id) => (
-                <Book key={id} bookId={id} sectionId={sectionId}/>
+            bookCartIds.map((id) => (
+                <Book key={id} bookId={id}/>
             ))}
     </div>
 }

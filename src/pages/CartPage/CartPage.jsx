@@ -1,13 +1,19 @@
 import {Order} from "../../components/Order/Order";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectCart, selectCartTotal} from "../../store/cart/selectors";
 import {selectBooks} from "../../store/books/selectors";
 import {Cart} from "../../components/Cart/Cart";
-import {Books} from "../../components/Books/Books";
+import {CartBooks} from "../../components/CartBooks/Books";
+
 
 export const CartPage = () => {
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     dispatch(loadCartIfNotExist);
+    // }, [dispatch]);
+
     return <div>
         <Cart/>
-        <Books cart={true}/>
+        <CartBooks/>
     </div>
 }

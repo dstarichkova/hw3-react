@@ -17,7 +17,11 @@ export function App() {
                     <Routes>
                         <Route path="/" element={<SectionPage/>}>
                             <Route path=":sectionId" element={<Section/>}/>
+                            {/*<Route path=":sectionId" element={<Section/>}>*/}
+                            {/*    <Route path=":bookId" element={<BookPage/>}/>*/}
+                            {/*</Route>*/}
                         </Route>
+                        <Route path="/book/:bookId" element={<BookPage/>}/>
                         <Route path="/cart" element={<CartPage/>}/>
                         <Route path="*" element={<NotFoundPage/>}/>
                     </Routes>
