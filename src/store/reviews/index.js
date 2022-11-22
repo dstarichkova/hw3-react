@@ -16,10 +16,9 @@ export const reviewSlice = createSlice({
             state.status = Statuses.inProgress;
         },
         successLoading: (state, action) => {
-            console.log(action.payload, '777')
             state.status = Statuses.success;
-            state.entities = {... state.entities, ... action.payload.entities};
-            state.ids = Array.from(new Set([... state.ids, ... action.payload.ids]));
+            state.entities = {...state.entities, ...action.payload.entities};
+            state.ids = Array.from(new Set([...state.ids, ...action.payload.ids]));
         },
         failLoading: (state) => {
             state.status = Statuses.failed;

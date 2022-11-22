@@ -12,9 +12,12 @@ export const Cart = () => {
 
     return <div className={styles.cart}>
         <h3 className={styles.cart__title}>Ваш заказ:</h3>
-        <ul>
-            {cart.map((item) => (<Order className={styles.cart__item} key={item.bookId} item={item}/>))}
+        <ul className={styles.cart__items}>
+            {cart.map((item) => (<Order key={item.bookId} item={item}/>))}
         </ul>
-        <div>Итого: {total}</div>
+        <div className={styles.cart__price}>
+            <div className={styles.cart__total}>Итого: {total}</div>
+            <button className={styles.cart__buy}>Купить</button>
+        </div>
     </div>
 }

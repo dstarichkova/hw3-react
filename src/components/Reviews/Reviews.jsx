@@ -13,11 +13,12 @@ import {loadReviewsIfNotExist} from "../../store/reviews/loadReviewsIfNotExist";
 export const Reviews = (className) => {
 
     const { bookId } = useParams();
-    console.log(bookId)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(loadReviewsIfNotExist(bookId));
     }, [bookId]);
+
+
 
     const reviewIds = useSelector(state => selectBookReviewIds(state, bookId))
     const isLoading = useSelector(state => selectIsReviewsLoading(state))

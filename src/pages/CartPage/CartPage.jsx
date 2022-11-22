@@ -4,15 +4,12 @@ import {selectCart, selectCartTotal} from "../../store/cart/selectors";
 import {selectBooks} from "../../store/books/selectors";
 import {Cart} from "../../components/Cart/Cart";
 import {CartBooks} from "../../components/CartBooks/Books";
+import styles from './styles.module.css';
 
 
 export const CartPage = () => {
-    // const dispatch = useDispatch();
-    // useEffect(() => {
-    //     dispatch(loadCartIfNotExist);
-    // }, [dispatch]);
 
-    return <div>
+    return <div className={styles.cart}>
         <Cart/>
         <CartBooks/>
     </div>
