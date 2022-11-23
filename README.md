@@ -1,15 +1,15 @@
-# Yandex Intensive Week 3
-Code for lesson #3 "React Basics" of Yandex Frontend development Intensive 2022.
+# Yandex Intensive Week 4
+Code for lesson #4 "Bulding React Apps" of Yandex Frontend development Intensive 2022.
 
 ## General info
 This project is a bookstore website. It was made for learning and practicing the basics of React.
+
+## Instructions
+To start the server, run "cd simple_api" "yarn start" in the console.
 
 ## Technologies
 This project is created with:
 * React
 * classnames
-* web-vitals
-
-## Links
-Link to deployed website:
-https://dstarichkova.github.io/hw3-react/
+* redux
+* react-router-dom
