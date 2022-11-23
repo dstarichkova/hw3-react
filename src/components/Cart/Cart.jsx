@@ -2,11 +2,23 @@ import {useSelector} from "react-redux";
 import {selectCart, selectCartTotal} from "../../store/cart/selectors";
 import {Order} from "../Order/Order";
 import styles from "./styles.module.css"
+import {useEffect, useState} from "react";
 
 
 export const Cart = () => {
-    const cart = useSelector(state => selectCart(state));
+    const [cart, setCart] = useState(useSelector(state => selectCart(state)));
     const total = useSelector(state => selectCartTotal(state));
+
+    console.log(cart)
+
+    useEffect(() => {
+        cart && localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart])
+
+    useEffect(() => {
+        const newCart = JSON.parse(localStorage.getItem('cart'))
+        setCart(newCart)
+    }, [])
 
     if (cart.length === 0) return <p>Корзина пуста</p>
 

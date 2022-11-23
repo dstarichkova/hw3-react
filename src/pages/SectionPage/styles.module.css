@@ -16,6 +16,7 @@
 }
 
 .sections__button {
+    text-decoration: none;
     text-align: left;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;

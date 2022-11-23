@@ -1,16 +1,20 @@
 import classnames from 'classnames';
 import styles from './styles.module.css';
-import {useParams} from "react-router-dom";
-import {useSelector} from "react-redux";
-import {selectBookById, selectBookReviewIds} from "../../store/books/selectors";
+import {useDispatch, useSelector} from "react-redux";
 import {selectReviewById} from "../../store/reviews/selectors";
 import {useEffect, useState} from "react";
+import {selectUserById} from "../../store/users/selectors";
+import {loadUsersIfNotExist} from "../../store/users/loadUsersIfNotExist";
 
 export const Review = ({ reviewId, className }) => {
-
-    console.log(reviewId)
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(loadUsersIfNotExist(reviewId));
+    }, [reviewId]);
 
     const [review, setReview] = useState(useSelector(state => selectReviewById(state, reviewId)))
+    console.log(review)
+
 
     useEffect(() => {
         review && localStorage.setItem('review', JSON.stringify(review))
@@ -21,11 +25,14 @@ export const Review = ({ reviewId, className }) => {
         setReview(newReview)
     }, [])
 
+    const user = useSelector(state => selectUserById(state, review?.userId))
+    console.log(user)
+
 
     return (
         <div className={classnames(styles.review, className)}>
             <div className={classnames(styles.review__user, className)}>
-                {review?.userId}
+                {user?.name}
             </div>
             <div className={classnames(styles.review__text, className)}>
                 {review?.text}

@@ -3,10 +3,8 @@ import styles from './styles.module.css';
 import classnames from "classnames";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {loadBooksIfNotExist} from "../../store/books/loadBooksIfNotExist";
-import {selectSectionBookIds} from "../../store/section/selectors";
-import {selectBookReviewIds, selectIsBooksLoading} from "../../store/books/selectors";
+import {useEffect, useState} from "react";
+import {selectBookReviewIds} from "../../store/books/selectors";
 import {selectIsReviewsLoading} from "../../store/reviews/selectors";
 import {loadReviewsIfNotExist} from "../../store/reviews/loadReviewsIfNotExist";
 
@@ -18,12 +16,17 @@ export const Reviews = (className) => {
         dispatch(loadReviewsIfNotExist(bookId));
     }, [bookId]);
 
-
-
-    const reviewIds = useSelector(state => selectBookReviewIds(state, bookId))
+    const [reviewIds, setReviewIds] = useState(useSelector(state => selectBookReviewIds(state, bookId)))
     const isLoading = useSelector(state => selectIsReviewsLoading(state))
 
-    // console.log(reviewIds)
+    useEffect(() => {
+        reviewIds && localStorage.setItem('reviewIds', JSON.stringify(reviewIds))
+    }, [reviewIds])
+
+    useEffect(() => {
+        const newReviewIds = JSON.parse(localStorage.getItem('reviewIds'))
+        setReviewIds(newReviewIds)
+    }, [])
 
     if (isLoading) {
         return <span>Loading ...</span>;

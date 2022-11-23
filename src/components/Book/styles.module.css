@@ -21,6 +21,7 @@
 }
 
 .book__name {
+    text-decoration: none;
     align-self: stretch;
     margin-bottom: 22px;
     font-weight: 700;
